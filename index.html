@@ -1,165 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FacioPay - Next-Gen Payment App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FacioPay - Seamless Touch-Free Payments</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/KanakAgrawalKgp/faciopay/a27f8662499fd627127a793a1aa1133520c0254f/faciopay%20favicon.png" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-  :root {
-    --dark-teal: #003B4A;
-    --copper: #B87333;
-    --matte-black: #1C1C1C;
-    --soft-silver: #C0C0C0;
-    --pure-white: #FFFFFF;
-    --accent-blue: #007BFF;
-  }
+    :root {
+      --primary: #000000;
+      --accent: #E63946;
+      --background: #F1F3F6;
+      --text: #2B2D42;
+      --white: #ffffff;
+    }
 
-  body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--pure-white);
-    color: var(--matte-black);
-    overflow-x: hidden;
-    font-size: 16px;
-    line-height: 1.6;
-  }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-  header {
-    background-color: var(--dark-teal);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-  }
+    header {
+      background-color: var(--primary);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--white);
+    }
 
-  .logo {
-    height: 120px;
-  }
+    .logo-header {
+      height: 50px;
+    }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-  nav a {
-    margin: 0 1.2rem;
-    color: var(--pure-white);
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-  }
+    nav a:hover {
+      color: var(--accent);
+    }
 
-  nav a:hover {
-    color: var(--soft-silver);
-  }
-
-  main {
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .section {
-    display: none;
-  }
-
-  .section.active {
-    display: block;
-  }
-
-  h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--dark-teal);
-    letter-spacing: 1px;
-  }
-
-  h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--copper);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.05rem;
-    color: var(--matte-black);
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    text-align: center;
-  }
-
-  button {
-    background-color: var(--accent-blue);
-    color: var(--pure-white);
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  button:hover {
-    background-color: #0056b3;
-  }
-    p {
-      text-align: justify;
-      font-size: 1.1rem;
+    main {
       max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-top: 4rem;
+    }
+
+    p {
+      text-align: center;
+      max-width: 800px;
       margin: 0 auto 1.5rem;
     }
 
-  .video-wrapper {
-  width: 100%;
-  max-width: 1100px;
-  margin: 2rem auto;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  position: relative;
-  height: 350px; /* Fixed height */
-}
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: var(--white);
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
 
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+    .logo-hero {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
 
-@media (max-width: 768px) {
-  .video-wrapper {
-    height: 250px; /* Shorter height for tablets and small laptops */
-  }
-}
-
-@media (max-width: 480px) {
-  .video-wrapper {
-    height: 200px; /* Very compact for mobile */
-  }
-}
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -169,223 +98,193 @@
     }
 
     .card {
-      background-color: var(--pure-white);
-      flex: 1 1 300px;
+      background: var(--white);
       padding: 2rem;
       border-radius: 1rem;
+      width: 300px;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transition: all 0.3s;
-      max-width: 350px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transform: translateY(-6px);
     }
 
     .card-icon {
-      font-size: 3rem;
-      color: var(--copper);
+      font-size: 2rem;
+      color: var(--accent);
       margin-bottom: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 1rem;
+      margin-top: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
     .founders {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .founder {
-      background-color: var(--pure-white);
-      padding: 2rem;
+      background-color: var(--white);
       border-radius: 1rem;
+      padding: 2rem;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .founder:hover {
-      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
 
     .founder img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
       border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
       margin-bottom: 1rem;
     }
 
     .contact-form {
-      background-color: var(--pure-white);
+      background-color: var(--white);
       padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       max-width: 600px;
-      margin: auto;
-      color: var(--dark-charcoal);
+      margin: 3rem auto;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
       border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      font-family: 'Open Sans', sans-serif;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
     }
 
     .contact-form button {
-      background-color: var(--dark-charcoal);
-      color: var(--pure-white);
+      background-color: var(--accent);
+      color: white;
       border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
-      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s;
     }
 
     .contact-form button:hover {
-      background-color: var(--copper);
-      color: var(--dark-charcoal);
+      background-color: #c92435;
     }
 
     footer {
+      background-color: var(--white);
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: var(--dark-charcoal);
-      background-color: var(--pure-white);
+      color: var(--text);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .logo {
-        height: 60px;
-      }
-
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 0.5rem 0;
-        font-size: 1rem;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .card {
-        max-width: 100%;
-      }
-
-      .video-wrapper {
-        aspect-ratio: 16/9;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
+    @media (max-width: 600px) {
+      .cards {
         flex-direction: column;
         align-items: center;
-      }
-
-      nav {
-        margin-top: 1rem;
-      }
-
-      .logo {
-        height: 50px;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-      }
-
-      p {
-        font-size: 1rem;
-        padding: 0 1rem;
-      }
-
-      .card-icon {
-        font-size: 2.5rem;
       }
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <img src="https://raw.githubusercontent.com/KanakAgrawalKgp/faciopay/refs/heads/main/Color%20logo%20with%20background.png" alt="FacioPay Logo" class="logo">
+    <img src="https://raw.githubusercontent.com/KanakAgrawalKgp/faciopay/refs/heads/main/Color%20logo%20with%20background.png" class="logo-header" alt="FacioPay logo" />
     <nav>
-      <a href="javascript:void(0);" onclick="showTab('whatwedo')">About FacioPay</a>
-      <a href="javascript:void(0);" onclick="showTab('founders')">Founders</a>
-      <a href="javascript:void(0);" onclick="showTab('contact')">Contact Us</a>
+      <a href="#about">About</a>
+      <a href="#founders">Founders</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="whatwedo" class="section active">
-      <h2>Introducing FacioPay: The Future of Payments</h2>
-      <p>Imagine paying at your favorite restaurant or sending money to a friend — without ever pulling out your phone or credit card. That’s what FacioPay makes possible. Using advanced facial recognition and simple gestures, we enable secure, touch-free payments in seconds. Just smile, wave, and you're done. FacioPay is redefining payments to be faster, easier, and more convenient than ever.</p>
+    <section class="hero">
+      <img src="https://raw.githubusercontent.com/KanakAgrawalKgp/faciopay/refs/heads/main/Color%20logo%20with%20background.png" class="logo-hero" alt="FacioPay Logo" />
+      <h1>Welcome to FacioPay</h1>
+      <p>Pay with a smile and a wave. FacioPay brings facial recognition technology to revolutionize everyday transactions—fast, secure, and touch-free.</p>
 
-    <div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/YX8BzK_LU0E?start=33" 
-    title="Product Demo" 
-    allowfullscreen>
-  </iframe>
-</div>
+      <!-- Feature image cards -->
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=800&q=80" alt="Face recognition payment" />
+          <p>Facial Recognition Payment</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1665686304496-24f6b2b6e8f6?fit=crop&w=800&q=80" alt="Palm vein scan payment" />
+          <p>Palm Vein Recognition Payment</p>
+        </div>
+      </div>
 
+      <!-- YouTube video -->
+      <iframe height="315" src="https://www.youtube.com/embed/YX8BzK_LU0E?start=33" allowfullscreen title="Product Demo"></iframe>
+
+      <!-- Benefit cards -->
       <div class="cards">
         <div class="card">
           <div class="card-icon">👋</div>
-          <h3>Hands-Free Payment</h3>
-          <p>Say goodbye to your credit card, wallet, or phone. With FacioPay, making payments is as easy as a smile and a wave. Pay at your favorite store or send money to a friend—no need to carry anything with you. It's that simple and convenient.</p>
+          <h3>Touchless Payments</h3>
+          <p>No phone, card, or cash needed—just your face and a wave.</p>
         </div>
         <div class="card">
           <div class="card-icon">⚡</div>
-          <h3>Faster Checkout</h3>
-          <p>Waiting in line is a hassle. FacioPay reduces checkout time, allowing both merchants and consumers to complete transactions instantly. Experience faster payments and more efficient service, all without the usual delays.</p>
+          <h3>Lightning Fast</h3>
+          <p>Pay in seconds and skip the wait. Perfect for busy lives.</p>
         </div>
         <div class="card">
           <div class="card-icon">🔒</div>
           <h3>Highly Secure</h3>
-          <p>We prioritize your privacy. Using state-of-the-art biometric encryption technology, we ensure your data is stored securely and only used for transaction authentication. Your information is never shared, and you have full control—you can delete your data anytime. With FacioPay, security is our top priority.</p>
+          <p>Bank-grade biometric encryption to protect your data.</p>
         </div>
       </div>
     </section>
 
-    <section id="founders" class="section">
+    <section id="founders">
       <h2>Our Founders</h2>
       <div class="founders">
         <div class="founder">
-          <img src="https://media.licdn.com/dms/image/v2/C4E03AQG-d3ARyteo1w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1592196724834?e=1750896000&v=beta&t=3X03jhWyKBvhBNRNsF4NqK0wMC2LVs2VJLMU50SBkOg" alt="Kanak Agrawal">
+          <img src="https://media.licdn.com/dms/image/v2/C4E03AQG-d3ARyteo1w/profile-displayphoto-shrink_200_200/0/1592196724834?e=1750896000&v=beta&t=3X03jhWyKBvhBNRNsF4NqK0wMC2LVs2VJLMU50SBkOg" alt="Kanak Agrawal">
           <h3>Kanak Agrawal</h3>
-          <p>Kanak Agrawal is a seasoned expert in machine learning and data science with a focus on financial analytics. With over 8 years of experience at PayPal and Capital One, Kanak specializes in predictive modeling, risk assessment, and data-driven decision-making. He has developed advanced financial forecasting models and machine learning solutions, empowering businesses to make smarter, data-backed decisions. Kanak holds a Master’s degree in Quantitative Management from Duke University, specializing in Business Analytics and Finance, and a Bachelor’s degree in Electrical Engineering from IIT Kharagpur. His leadership at FacioPay ensures the company harnesses the power of data to drive innovation in digital payments.</p>
+          <p>Data science leader with deep fintech expertise from PayPal and Capital One.</p>
         </div>
         <div class="founder">
-          <img src="https://media.licdn.com/dms/image/v2/C4E03AQFPFGAwQLWjpg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1621921125895?e=1750896000&v=beta&t=wUVKRbnSIwmi5zzw4bkHGDL9BTn2AOclb_ps5nnRZAQ" alt="Harish Bhakuni">
+          <img src="https://media.licdn.com/dms/image/v2/C4E03AQFPFGAwQLWjpg/profile-displayphoto-shrink_200_200/0/1621921125895?e=1750896000&v=beta&t=wUVKRbnSIwmi5zzw4bkHGDL9BTn2AOclb_ps5nnRZAQ" alt="Harish Bhakuni">
           <h3>Harish Bhakuni</h3>
-          <p>Harish Bhakuni has over six years of experience at Amazon Web Services (AWS). Harish has worked on cutting-edge distributed systems in storage and security domains. His contributions to the OpenSearch Project and expertise in cloud-native architecture have shaped modern, scalable data platforms. A graduate of GL Bajaj Institute of Technology, Harish is passionate about leveraging technology to solve complex challenges and is dedicated to ensuring FacioPay’s solutions meet the highest standards of security, scalability, and innovation.</p>
+          <p>Distributed systems expert with 6+ years at Amazon Web Services.</p>
         </div>
         <div class="founder">
-          <img src="https://media.licdn.com/dms/image/v2/C5603AQHjZWy99f3H_Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1641549988212?e=1750896000&v=beta&t=KTcwk3er1Z1AsIiYDJBVeN51w7gtOWTcHG3oU71jtDo" alt="Siddharth Pandey">
+          <img src="https://media.licdn.com/dms/image/v2/C5603AQHjZWy99f3H_Q/profile-displayphoto-shrink_200_200/0/1641549988212?e=1750896000&v=beta&t=KTcwk3er1Z1AsIiYDJBVeN51w7gtOWTcHG3oU71jtDo" alt="Siddharth Pandey">
           <h3>Siddharth Pandey</h3>
-          <p>Siddharth Pandey has almost a decade of work experience in software engineering. Siddharth has held key roles at Amazon and LinkedIn, specializing in cloud technologies and software development. At Amazon, he contributed to Alexa’s cloud services, optimizing features for millions of users and devices. Holding a Master’s in Computer Science from Arizona State University and a Bachelor’s from Delhi College of Engineering, Siddharth excels in AWS, Java, distributed systems, and data analytics. His leadership at FacioPay merges technical expertise with a vision to transform digital payments.</p>
+          <p>Cloud engineer and AI enthusiast with experience at Amazon and LinkedIn.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact">
       <h2>Contact Us</h2>
-      <p>If you have any questions or need assistance, feel free to reach out to us at <a href="mailto:faciopay2025@gmail.com">kanakagrawal2010@gmail.com</a>.</p>
+      <div class="contact-form">
+        <p>Email us at <a href="mailto:faciopay2025@gmail.com">faciopay2025@gmail.com</a></p>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="Your Message" rows="5"></textarea>
+        <button type="submit">Send Message</button>
+      </div>
     </section>
   </main>
 
@@ -393,12 +292,5 @@
     <p>&copy; 2025 FacioPay. All rights reserved.</p>
   </footer>
 
-  <script>
-    function showTab(tab) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(tab).classList.add('active');
-    }
-  </script>
 </body>
 </html>
