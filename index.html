@@ -173,37 +173,25 @@
       margin-bottom: 1rem;
     }
 
-    .contact-form {
+    .contact-email {
       background-color: var(--white);
       padding: 2rem;
       border-radius: 1rem;
       max-width: 600px;
       margin: 3rem auto;
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .contact-form button {
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      text-align: center;
+      font-size: 1.5rem;
       font-weight: 600;
-      cursor: pointer;
     }
 
-    .contact-form button:hover {
-      background-color: #c92435;
+    .contact-email a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-email a:hover {
+      color: var(--accent);
     }
 
     footer {
@@ -307,12 +295,8 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <div class="contact-form">
-      <p>Email us at <a href="mailto:faciopay2025@gmail.com">info@faciopay.app</a></p>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea placeholder="Your Message" rows="5"></textarea>
-      <button type="submit">Send Message</button>
+    <div class="contact-email">
+      <p>Email us at <a href="mailto:info@faciopay.app">info@faciopay.app</a></p>
     </div>
   </section>
 </main>
